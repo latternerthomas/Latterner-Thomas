@@ -15,11 +15,11 @@
    2. GLOBAL
    ========================================= */
 body {
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Poppins', sans-serif;
     background-color: var(--dark-bg);
     color: white;
     overflow-x: hidden;
-}
+    position: relative; /* <--- AJOUTE CETTE LIGNE ICI */
 
 html {
     scroll-padding-top: 80px; /* Pour ne pas cacher le titre sous la navbar */
@@ -236,4 +236,5 @@ a { text-decoration: none; transition: 0.3s; }
 
 @media (max-width: 768px) {
     .text-justify { text-align: left; }
+
 }
