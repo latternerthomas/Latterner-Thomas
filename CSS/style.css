@@ -15,11 +15,12 @@
    2. GLOBAL
    ========================================= */
 body {
-   font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--dark-bg);
     color: white;
     overflow-x: hidden;
-    position: relative; /* <--- AJOUTE CETTE LIGNE ICI */
+    position: relative; /* INDISPENSABLE POUR SCROLLSPY */
+}
 
 html {
     scroll-padding-top: 80px; /* Pour ne pas cacher le titre sous la navbar */
@@ -32,11 +33,11 @@ a { text-decoration: none; transition: 0.3s; }
 .text-justify { text-align: justify; }
 
 /* =========================================
-   3. NAVBAR
+   3. NAVBAR & BARRE ROUGE ANIMÉE
    ========================================= */
 .navbar {
     padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.95) !important; /* Noir presque opaque */
+    background-color: rgba(0, 0, 0, 0.95) !important;
 }
 
 .navbar-brand span {
@@ -47,24 +48,31 @@ a { text-decoration: none; transition: 0.3s; }
 .nav-link {
     font-weight: 500;
     margin-left: 1rem;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    position: relative; /* Nécessaire pour placer la barre en dessous */
+    transition: 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, 
+.nav-link.active {
     color: white !important;
 }
 
+/* La barre rouge en dessous */
 .nav-link::after {
     content: '';
-    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
     width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-    margin-top: 5px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+/* Quand le lien est actif (détecté par le scroll ou hover), la barre s'allonge */
+.nav-link.active::after,
+.nav-link:hover::after {
     width: 100%;
 }
 
@@ -73,7 +81,6 @@ a { text-decoration: none; transition: 0.3s; }
    ========================================= */
 #hero {
     height: 100vh;
-    /* Vérifie bien que ton image de fond est bien nommée black-white-background.jpg dans ton dossier images */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('../images/black-white-background.jpg');
     background-size: cover;
     background-position: center;
@@ -236,5 +243,4 @@ a { text-decoration: none; transition: 0.3s; }
 
 @media (max-width: 768px) {
     .text-justify { text-align: left; }
-
 }
