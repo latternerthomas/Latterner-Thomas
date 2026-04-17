@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thomas Latterner | Portfolio</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/TL.png">
+    <title>Thomas Latterner - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+<body>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100" data-bs-root-margin="0px 0px -40%" tabindex="0">
-
-    <nav id="navbar-example" class="navbar navbar-expand-lg fixed-top navbar-dark bg-black shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#hero">T. LATTERNER <span class="text-danger">.</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#hobbies">Intérêts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <!-- NOUVEAU MENU FLOTTANT (Pillule Glassmorphism) -->
+    <div class="container fixed-top mt-3" style="z-index: 1030;">
+        <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark navbar-floating shadow-lg">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand fw-bold" href="#hero">T. LATTERNER <span class="text-danger">.</span></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hobbies">Intérêts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
+    <!-- HERO SECTION -->
     <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white">
         <div class="container">
             <h4 class="text-uppercase tracking-wider">Bienvenue sur mon Portfolio</h4>
@@ -44,134 +47,142 @@
         </div>
     </section>
 
+    <!-- PROFIL SECTION -->
     <section id="about" class="section-padding bg-dark text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="photo-wrapper profile-img-container mx-auto">
-                        <img src="images/photo-id.jpg" class="img-fluid rounded shadow-lg" alt="Thomas Latterner">
-                    </div>
-                    <div class="text-center mt-3">
-                        <ul class="list-unstyled text-secondary">
-                            <li class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2"></i> Blois / Bourges</li>
-                            <li class="mb-2"><i class="fas fa-calendar text-danger me-2"></i> 07 / 04 / 2005</li>
-                        </ul>
-                        <a href="images/CV.pdf" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill w-100">Télécharger mon CV</a>
+            <!-- BLOC FUSIONNÉ : Photo + Identité + Alternance -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="content-card p-4 p-md-5">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                                <div class="photo-wrapper profile-img-container mx-auto mb-4" style="max-width: 180px;">
+                                    <img src="images/photo-id.jpg" class="img-fluid rounded shadow-lg" alt="Thomas Latterner">
+                                </div>
+                                <h3 class="fw-bold mb-3">Thomas Latterner</h3>
+                                <ul class="list-unstyled text-secondary text-start mx-auto d-inline-block small">
+                                    <li class="mb-2"><i class="fas fa-map-marker-alt text-danger me-2" style="width: 15px;"></i> Blois / Bourges</li>
+                                    <li class="mb-2"><i class="fas fa-calendar text-danger me-2" style="width: 15px;"></i> 07 / 04 / 2005</li>
+                                    <li class="mb-2"><i class="fas fa-envelope text-danger me-2" style="width: 15px;"></i> latternerthomas07@gmail.com</li>
+                                    <li class="mb-2"><i class="fas fa-phone text-danger me-2" style="width: 15px;"></i> 07 82 26 86 23</li>
+                                </ul>
+                                <div class="mt-3">
+                                    <a href="images/cv.pdf" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill w-100 py-2">Télécharger mon CV</a>
+                                </div>
+                            </div>
+                            <div class="col-md-7 ps-md-5">
+                                <h4 class="fw-bold mb-2">Étudiant en BUT Réseaux & télécommunications</h4>
+                                <hr class="border-danger border-2 opacity-100 mt-3 mb-3" style="width: 60px;">
+                                <h6 class="text-danger text-uppercase mb-4 fw-bold">Alternant à la DRAC Centre-Val de Loire à Orléans</h6>
+                                <p class="text-secondary text-justify">
+                                    Depuis septembre 2025, j'occupe un poste d'<strong>alternant</strong> au sein du Service Informatique (SI) de la Direction Régionale des Affaires Culturelles à Orléans.
+                                </p>
+                                <p class="text-secondary text-justify">
+                                    Ma mission principale consiste à accompagner mon tuteur dans la gestion du parc informatique et à assurer un support technique réactif pour l'ensemble des agents. Cette expérience me permet d'appliquer mes compétences en administration systèmes et réseaux en milieu professionnel exigeant.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-8 ps-lg-5">
-                    <h6 class="text-danger text-uppercase">À propos de moi</h6>
-                    <h2 class="mb-4">Rigueur, Ponctualité & Organisation</h2>
-                    <div class="text-secondary text-justify">
-                         <p>
-                            Bonjour, je suis actuellement étudiant en première année du BUT R&T (Réseaux et Télécommunications) à Blois. 
-                            Avant cette deuxième année d'études supérieures, j'étais étudiant au Lycée Pierre Emile Martin à Bourges où j'ai obtenu un <strong>Baccalauréat STI2D</strong> (Sciences et Technologies de l'Industrie et du Développement Durable) avec une spécialisation en SIN. Ma scolarité m'a permis d'acquérir de solides connaissances dans ce domaine.
-                        </p>
-
-                        <p>
-                            En septembre 2021, j'ai intégré l'école militaire de Rochefort, plus précisément à l'<a href="https://eetaa722.fr/" target="_blank" class="text-danger text-decoration-none">EEPAA</a>. 
-                            Bien que je sois parti au bout de 2 mois car la mécanique aéronautique ne me convenait pas, j'ai tout de même apprécié cette première expérience qui m'a inculqué une certaine rigueur.
-                        </p>
-
-                        <p>
-                            Toujours dans le cadre de mes expériences personnelles, j'ai participé au <a href="https://www.snu.gouv.fr/" target="_blank" class="text-danger text-decoration-none">SNU</a> en juin 2021.
-                            C'est une expérience inoubliable de 12 jours où j'ai rencontré des professionnels (pompiers, militaires, gendarmes) et vécu une aventure humaine unique.
-                            Plus récemment, en février 2023, j'ai effectué ma PMI (Préparation Militaire Initiale) à la base <a href="https://devenir-aviateur.fr/venir/implantations/base-aerienne/base-aerienne-702-avord" target="_blank" class="text-danger text-decoration-none">BA 702 d'Avord</a>. 
-                        </p>
-
-                        <p>
-                            Côté professionnel, j'ai effectué mon premier travail à l'été 2023 chez <a href="https://www.dyka.fr/fr" target="_blank" class="text-danger text-decoration-none">DYKA</a> en tant qu'opérateur de conditionnement.
-                            Ensuite, durant l'été 2024, j'ai travaillé deux mois chez <a href="https://www.conforama.fr/" target="_blank" class="text-danger text-decoration-none">Conforama</a> à Bourges comme vendeur, poste que j'occuperai à nouveau durant l'été 2025.
-                        </p>
-
-                        <p> 
-                            Enfin depuis septembre 2025 je suis en alternance au sein du Service Informatique (SI) de la <a href="https://www.culture.gouv.fr/regions/drac-centre-val-de-loire" target="_blank" class="text-danger text-decoration-none">DRAC</a> Centre-Val de Loire (Direction Régional des Affaires Culturelles).<br\>
-                            Je participe à la gestion complète du parc informatique (installation, maintenance, renouvellement) et assure le support utilisateur via l'outil de ticketing Ivanti. 
-                            Au quotidien, je contribue aussi également à l'administration des infrastructures réseaux et systèmes (VPN, Wi-Fi, serveurs).
-                        </p>
+            <!-- FRISE CHRONOLOGIQUE -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="content-card p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <h2>Mon Parcours Professionnel & Personnel</h2>
+                            <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
+                        </div>
+                        <div class="mx-auto" style="max-width: 850px;">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Sept 2025 - Actuellement</span>
+                                    <h4 class="timeline-title">Alternance - DRAC <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Orléans</span></h4>
+                                    <p class="timeline-text">Gestion complète du parc informatique, support utilisateur via l'outil de ticketing Ivanti, et administration des infrastructures réseaux et systèmes.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Juil - Août 2024 & 2025</span>
+                                    <h4 class="timeline-title">Vendeur Électroménager - Conforama <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Bourges</span></h4>
+                                    <p class="timeline-text">Accueil client, conseil technique et gestion des ventes en magasin. Développement du sens du relationnel et de la ponctualité.</p>
+                                </div>
+								<div class="timeline-item">
+                                    <span class="timeline-date">Sept 2023 - Actuellement</span>
+                                    <h4 class="timeline-title">BUT Réseaux & Télécommunications <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Blois</span></h4>
+                                    <p class="timeline-text">Étudiant à l'IUT. Acquisition de compétences en administration réseaux, télécommunications, informatique et cybersécurité.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Juil - Août 2023</span>
+                                    <h4 class="timeline-title">Opérateur de Conditionnement - DYKA <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>La Chapelle Saint Ursin</span></h4>
+                                    <p class="timeline-text">Première expérience du monde du travail et apprentissage de la rigueur en milieu industriel.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Fév 2023</span>
+                                    <h4 class="timeline-title">PMI (Préparation Militaire Initiale) - BA 702 <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Avord</span></h4>
+                                    <p class="timeline-text">Immersion de 12 jours sur base aérienne. Apprentissage de la discipline militaire (ordre serré), secourisme et découverte des métiers de l'armée de l'Air et de l'Espace.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2019 - 2023</span>
+                                    <h4 class="timeline-title">Baccalauréat STI2D (Spécialité SIN) <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Bourges</span></h4>
+                                    <p class="timeline-text">Lycée Pierre Emile Martin. Sciences et Technologies de l'Industrie et du Développement Durable, spécialisation Systèmes d'Information et Numérique.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Sept - Oct 2021</span>
+                                    <h4 class="timeline-title">École d'Enseignement Technique de l'Armée de l'Air (EETAA) <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Rochefort</span></h4>
+                                    <p class="timeline-text">Première expérience en école militaire. Bien que courte, cette période a été très enrichissante et m'a inculqué une forte rigueur.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="timeline-date">Juin 2021</span>
+                                    <h4 class="timeline-title">SNU (Service National Universel) <span class="text-secondary small fw-normal"><i class="fas fa-map-marker-alt ms-2 me-1"></i>Châteauroux</span></h4>
+                                    <p class="timeline-text">Séjour de cohésion de 2 semaines. Rencontres avec des professionnels (militaires, pompiers, gendarmes) et aventure humaine unique axée sur l'engagement.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PORTFOLIO REALISATIONS -->
     <section id="portfolio" class="section-padding bg-black text-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="text-danger text-uppercase">Portfolio</h6>
                 <h2>Mes Réalisations R&T</h2>
+                <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
+                <p class="text-secondary mt-2">Cliquez sur un domaine pour voir les projets en détail.</p>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/reseau1.png" alt="Cisco Packet Tracer">
-                        </div>
+                    <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalReseau1">
+                        <div class="card-img-holder"><img src="images/reseau1.png" alt="Architecture Réseau"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-danger mb-2">SAE 102</span>
-                            <h5>Initiation Réseaux</h5>
-                            <p class="small text-secondary">Création de réseaux pour une bibliothèque et une salle de cours sur Cisco Packet Tracer.</p>
+                            <span class="badge bg-danger mb-2">Réseaux</span>
+                            <h5>Architecture & Sécurisation</h5>
+                            <p class="small text-secondary">Routage dynamique (OSPF), DMZ et VPN IPsec de site à site.</p>
+                            <span class="text-danger small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/reseau2.png" alt="Architecture Réseau">
-                        </div>
+                    <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalTelecom1">
+                        <div class="card-img-holder"><img src="images/physique.png" alt="Transmission Télécoms"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-danger mb-2">SAE 201</span>
-                            <h5>Réseau PME</h5>
-                            <p class="small text-secondary">Mise en place complète : Services DNS/HTTP, règles ACL, routage OSPF et NAT.</p>
+                            <span class="badge bg-warning text-dark mb-2">Télécoms & Signal</span>
+                            <h5>Électronique & Filtrage</h5>
+                            <p class="small text-secondary">Étude d'impédances, diagrammes de Bode et analyse FFT sur oscilloscope.</p>
+                            <span class="text-warning small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/graphiquesae104.png" alt="Site Web">
-                        </div>
+                    <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalTelephonie1">
+                        <div class="card-img-holder"><img src="images/telephone.png" alt="Téléphonie IP"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-info text-dark mb-2">SAE 104</span>
-                            <h5>Web & Présentation</h5>
-                            <p class="small text-secondary">Premier site en HTML/CSS pur. Apprentissage du responsive design.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/graphiquesae105.png" alt="Data Python">
-                        </div>
-                        <div class="card-body-custom">
-                            <span class="badge bg-info text-dark mb-2">SAE 105</span>
-                            <h5>Data Viz & Python</h5>
-                            <p class="small text-secondary">Analyse de logs avec Python et génération de graphiques.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/graphiquesae203.png" alt="Base de données">
-                        </div>
-                        <div class="card-body-custom">
-                            <span class="badge bg-info text-dark mb-2">SAE 203</span>
-                            <h5>Site Dynamique SQL</h5>
-                            <p class="small text-secondary">Site web relié à une BDD avec filtres dynamiques.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-custom">
-                        <div class="card-img-holder">
-                            <img src="images/physique.png" alt="Oscilloscope">
-                        </div>
-                        <div class="card-body-custom">
-                            <span class="badge bg-warning text-dark mb-2">SAE 103</span>
-                            <h5>Transmission Signal</h5>
-                            <p class="small text-secondary">Étude des circuits RLC et analyse à l'oscilloscope.</p>
+                            <span class="badge bg-info text-dark mb-2">Téléphonie</span>
+                            <h5>Déploiement VoIP & PABX</h5>
+                            <p class="small text-secondary">Configuration Alcatel (OXO/OXE) et analyse QoS.</p>
+                            <span class="text-info small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
                 </div>
@@ -179,100 +190,502 @@
         </div>
     </section>
 
-    <section id="hobbies" class="section-padding bg-dark text-white">
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-padding bg-dark text-white border-top border-secondary">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="text-danger text-uppercase">Ce qui m'anime</h6>
+                <h2>Compétences Acquises</h2>
+                <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
+                <p class="text-secondary mt-2">Cliquez sur une compétence pour voir les détails techniques.</p>
+            </div>
+            <div class="row g-4">
+                
+                <!-- COLONNE 1 : INFRASTRUCTURES -->
+                <div class="col-lg-4">
+                    <div class="category-title">Infrastructures</div>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillNetwork">
+							<span class="skill-badge">Avancé</span>
+							<i class="fas fa-network-wired card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Administration Réseaux</h5>
+							<p class="text-secondary small mb-0">Conception d'architectures réseaux, configuration d'équipements Cisco et sécurisation des flux de données inter-sites.</p>
+						</div>
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillSystems">
+							<span class="skill-badge">Intermédiaire</span>
+							<i class="fab fa-windows card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Administration Systèmes</h5>
+							<p class="text-secondary small mb-0">Déploiement d'environnements serveurs et gestion des services d'annuaire (AD).</p>
+						</div>
+                    </div>
+                </div>
+
+                <!-- COLONNE 2 : DÉVELOPPEMENT -->
+                <div class="col-lg-4">
+                    <div class="category-title">Développement & Data</div>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillDev">
+							<span class="skill-badge">Intermédiaire</span>
+							<i class="fas fa-laptop-code card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Programmation & Web</h5>
+							<p class="text-secondary small mb-0">Développement de scripts d'automatisation, conception d'interfaces web responsives et gestion de bases de données relationnelles.</p>
+						</div>
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillJava">
+							<span class="skill-badge">Intermédiaire</span>
+							<i class="fab fa-java card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Java & Applications Réseau</h5>
+							<p class="text-secondary small mb-0">Maîtrise de la Programmation Orientée Objet (POO) pour le développement d'applications client-serveur robustes et multi-threadées.</p>
+						</div>
+                    </div>
+                </div>
+
+                <!-- COLONNE 3 : TÉLÉCOMS -->
+                <div class="col-lg-4">
+                    <div class="category-title">Télécommunications</div>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillVoIP">
+							<span class="skill-badge">Intermédiaire</span>
+							<i class="fas fa-phone-volume card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Téléphonie IP (VoIP)</h5>
+							<p class="text-secondary small mb-0">Déploiement d'architectures de communications unifiées, administration d'IPBX/PABX et gestion de la qualité de service (QoS).</p>
+						</div>
+                        <div class="skill-card-v3" data-bs-toggle="modal" data-bs-target="#modalSkillTelecom">
+							<span class="skill-badge">Intermédiaire</span>
+							<i class="fas fa-wave-square card-icon"></i>
+							<h5 class="fw-bold text-white mb-2">Électronique & Signal</h5>
+							<p class="text-secondary small mb-0">Étude des impédances complexes, conception de filtres analogiques, tracé de diagrammes de Bode et analyse spectrale.</p>
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section-padding bg-black text-white border-top border-secondary">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Mes Certifications</h2>
+                <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
+                <p class="text-secondary mt-2">Reconnaissances officielles et professionnelles.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="content-card p-4 p-md-5 certif-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-4 mb-md-0">
+                                <img src="images/ccna-badge.png" alt="Badge CCNA 1" class="img-fluid certif-badge-img">
+                            </div>
+                            <div class="col-md-9 text-center text-md-start">
+                                <span class="badge bg-warning text-dark mb-3 fw-bold px-3 py-2">Récemment Obtenue</span>
+                                <h4 class="fw-bold mb-2">CCNA 1 : Introduction to Networks</h4>
+                                <h6 class="text-secondary mb-3"><i class="fas fa-building me-2"></i>Cisco Networking Academy</h6>
+                                <p class="text-secondary small mb-4">
+                                    Validation des compétences fondamentales en réseaux : architecture des modèles OSI et TCP/IP, adressage IPv4/IPv6, conception de réseaux locaux (LAN) et configuration initiale des routeurs et commutateurs Cisco.
+                                </p>
+                                <a href="https://www.credly.com/badges/dee3f238-2dad-443e-8485-53effe449431" target="_blank" class="btn btn-outline-warning rounded-pill btn-sm px-4 py-2 fw-bold">
+                                    <i class="fas fa-external-link-alt me-2"></i> Voir le badge certifié sur Credly
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOBBIES SECTION -->
+    <section id="hobbies" class="section-padding bg-dark text-white border-top border-secondary">
+        <div class="container">
+            <div class="text-center mb-5">
                 <h2>Passions & Équilibre</h2>
+                <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="hobby-card text-center p-4 h-100">
                         <div class="icon-box mb-3"><i class="fas fa-futbol fa-3x text-danger"></i></div>
                         <h4 class="mb-3">Sport & Football</h4>
-                        <p class="text-secondary text-justify">Passionné par le sport, j'ai pratiqué le football en club depuis l'âge de 8 ans.</p>
+                        <p class="text-secondary text-justify">
+                            Passionné par le sport, j'ai pratiqué le football en club depuis l'âge de 8 ans. <br/>
+                            Je pratique aujourd'hui le futsal en université et la course à pied. <br/>
+                            Ce parcours m'a inculqué des valeurs fortes comme l'esprit d'équipe et le dépassement de soi.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="hobby-card text-center p-4 h-100">
                         <div class="icon-box mb-3"><i class="fas fa-cut fa-3x text-danger"></i></div>
                         <h4 class="mb-3">Le monde de la coiffure</h4>
-                        <p class="text-secondary text-justify">Autodidacte en "selfcut" depuis 2 ans, j'ai appris la rigueur et la précision.</p>
+                        <p class="text-secondary text-justify">
+                            Autodidacte en "selfcut" depuis 2 ans, j'ai appris la rigueur et la précision. <br/><br/>
+                            Ce qui a commencé comme une curiosité est devenu une passion et une compétence que je partage avec mes amis.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="hobby-card text-center p-4 h-100">
                         <div class="icon-box mb-3"><i class="fas fa-users fa-3x text-danger"></i></div>
                         <h4 class="mb-3">Vie sociale & Culture</h4>
-                        <p class="text-secondary text-justify">Je me ressource via des moments conviviaux, la musique et le cinéma.</p>
+                        <p class="text-secondary text-justify">
+                            Je me ressource via des moments conviviaux, la musique, le sport, le cinéma et d'autres activités, 
+                            essentiels pour rester créatif et motivé dans mes projets professionnels.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding bg-black text-white">
+    <!-- CONTACT SECTION AVEC NOUVEAU FORMULAIRE FONCTIONNEL -->
+    <section id="contact" class="section-padding bg-black text-white border-top border-secondary">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
-                    <h6 class="text-danger text-uppercase">Contact</h6>
-                    <h2 class="mb-4">Discutons ensemble</h2>
-                    <p class="text-secondary">N'hésitez pas à me contacter via le formulaire ou sur mes réseaux.</p>
-                    <div class="d-flex flex-column gap-3 mt-4">
-                        <a href="mailto:latternerthomas07@gmail.com" class="text-white text-decoration-none contact-link">
-                            <i class="far fa-envelope me-3 text-danger"></i> latternerthomas07@gmail.com
+                    <h6 class="text-danger text-uppercase">Si vous avez une question n'hésitez pas.</h6>
+                    <h2 class="mb-3">Contactez-moi</h2>
+                    <hr class="border-danger border-2 opacity-100 mt-2 mb-4" style="width: 60px;">
+                    <div class="d-flex flex-column gap-3">
+                        <a href="mailto:latternerthomas07@gmail.com" class="d-flex align-items-center text-white text-decoration-none contact-link">
+                            <div class="btn-circle me-3"><i class="far fa-envelope"></i></div><span>latternerthomas07@gmail.com</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/thomas-latterner-9a902a29b/" target="_blank" class="text-white text-decoration-none contact-link">
-                            <i class="fab fa-linkedin-in me-3 text-danger"></i> Thomas Latterner
+                        <a href="https://www.linkedin.com/in/thomas-latterner-9a902a29b/" target="_blank" class="d-flex align-items-center text-white text-decoration-none contact-link">
+                            <div class="btn-circle me-3"><i class="fab fa-linkedin-in"></i></div><span>Thomas Latterner</span>
                         </a>
-                        <a href="https://www.instagram.com/tho._ltn" target="_blank" class="text-white text-decoration-none contact-link">
-                            <i class="fab fa-instagram me-3 text-danger"></i> @tho._ltn
+                        <a href="https://www.instagram.com/tho._ltn" target="_blank" class="d-flex align-items-center text-white text-decoration-none contact-link">
+                            <div class="btn-circle me-3"><i class="fab fa-instagram"></i></div><span>@tho._ltn</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <form class="p-4 rounded-3 contact-form shadow-lg">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control dark-input" placeholder="Votre Nom">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control dark-input" placeholder="Votre Email">
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control dark-input" placeholder="Sujet">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control dark-input" placeholder="Message" style="height: 150px"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-danger w-100 py-3 rounded-pill">Envoyer</button>
-                            </div>
-                        </div>
-                    </form>
+                    <!-- Formulaire fonctionnel via Formspree -->
+                    <form action="https://formspree.io/f/xaqaeevl" method="POST" class="p-4 p-md-5 rounded-3 contact-form shadow-lg">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="input-icon-wrapper">
+                <i class="fas fa-user text-danger"></i>
+                <input type="text" name="nom" class="form-control dark-input py-3" id="name" placeholder="Votre Nom" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-icon-wrapper">
+                <i class="fas fa-envelope text-danger"></i>
+                <input type="email" name="email" class="form-control dark-input py-3" id="email" placeholder="Votre Email" required>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="input-icon-wrapper">
+                <i class="fas fa-tag text-danger"></i>
+                <input type="text" name="sujet" class="form-control dark-input py-3" id="subject" placeholder="Sujet" required>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="input-icon-wrapper textarea-wrapper">
+                <i class="fas fa-comment-dots text-danger"></i>
+                <textarea name="message" class="form-control dark-input py-3" placeholder="Votre Message" id="message" style="height: 150px" required></textarea>
+            </div>
+        </div>
+        <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-danger btn-lg w-100 rounded-pill py-3 fw-bold shadow">
+                <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+            </button>
+        </div>
+    </div>
+</form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-4 text-center text-secondary border-top border-secondary bg-black" style="font-size: 0.9rem;">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Thomas LATTERNER. Tous droits réservés.</p>
+    <!-- MODALES PROJETS -->
+    <div class="modal fade" id="modalReseau1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary"><h5 class="modal-title text-danger">Architecture & Sécurisation</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-7"><img src="images/reseau1.png" class="img-fluid rounded border border-secondary" alt="Cisco"></div>
+                        <div class="col-lg-5">
+                            <h4 class="text-danger h5 mb-3">Détails du Projet</h4>
+                            <p class="text-secondary small">Simulation réseau complète sur Cisco Packet Tracer : Routage OSPF, DMZ, et Tunnel VPN IPsec pour sécuriser les flux inter-sites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+    
+    <div class="modal fade" id="modalTelecom1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary"><h5 class="modal-title text-warning">Électronique & Filtrage de Signaux</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <img src="images/physique.png" class="img-fluid rounded border border-secondary w-75 mx-auto d-block" alt="Analyse de signal sur oscilloscope">
+                            <h4 class="text-warning h5 mb-3 mt-4">Détails des Projets (TP2 & TP4)</h4>
+                            <p class="text-secondary small text-justify">
+                                Ces travaux pratiques se concentrent sur la caractérisation de composants électroniques et le traitement matériel des signaux.
+                            </p>
+                            <ul class="text-secondary small">
+                                <li class="mb-2"><strong>Impédances Complexes :</strong> Étude théorique et pratique des dipôles (L-R, C-L-R). Mesure du déphasage et du retard temporel entre la tension et le courant sur différentes fréquences.</li>
+                                <li class="mb-2"><strong>Caractérisation de Filtres :</strong> Identification de filtres inconnus. Calcul de la fréquence de coupure (-3dB) et tracé des diagrammes de Bode pour déterminer la pente et l'ordre du filtre.</li>
+                                <li><strong>Analyse Spectrale :</strong> Filtrage de signaux complexes et observation du spectre fréquentiel à l'aide de la fonction FFT de l'oscilloscope.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 rounded bg-secondary bg-opacity-10 border border-secondary mb-4">
+                                <h4 class="text-warning h5 mb-3"><i class="fas fa-tools me-2"></i>Matériel maîtrisé</h4>
+                                <ul class="list-unstyled mb-0 text-secondary small">
+                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Oscilloscope numérique (mesures temporelles et FFT).</li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Générateur Basses Fréquences (GBF).</li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Composants RLC.</li>
+                                    <li class="mb-0"><i class="fas fa-check text-warning me-2"></i>Traitement de données sur Excel.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="modalTelephonie1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info"><i class="fas fa-phone-alt me-2"></i> Déploiement et Configuration de Systèmes VoIP</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <img src="images/telephone.png" class="img-fluid rounded shadow mb-4 border border-secondary w-75 mx-auto d-block" alt="Téléphone IP Alcatel">
+                            <h4 class="text-info h5 mb-3"><i class="fas fa-project-diagram me-2"></i>Détails du Projet</h4>
+                            <p class="text-secondary text-justify">
+                                Ce projet porte sur l'administration et la mise en œuvre de solutions de téléphonie sur IP (VoIP) professionnelles. J'ai configuré des architectures basées sur des PABX <strong>Alcatel-Lucent Enterprise (ALE)</strong>, notamment les systèmes OmniPCX Office (OXO) et OmniPCX Enterprise (OXE).
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-4 rounded bg-secondary bg-opacity-10 border border-secondary mb-4">
+                                <h4 class="text-info h5 mb-3"><i class="fas fa-tools me-2"></i>Compétences acquises</h4>
+                                <ul class="list-unstyled mb-0 text-secondary small">
+                                    <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Administration de PABX Alcatel (OXO/OXE).</li>
+                                    <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Analyse de protocoles de signalisation (SIP, H.323).</li>
+                                    <li class="mb-0"><i class="fas fa-check text-info me-2"></i>Mise en réseau et diagnostic QoS.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES COMPÉTENCES -->
+    <div class="modal fade" id="modalSkillNetwork" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Réseaux & Infrastructures</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                        <i class="fas fa-network-wired text-danger mb-4" style="font-size: 5rem;"></i>
+                        <p class="text-secondary small text-justify">
+                            Mise en œuvre de solutions de routage et commutation avancées sur environnement Cisco.
+                        </p>
+                    </div>
+                    <div class="col-md-7 ps-md-4">
+                        <h6 class="fw-bold mb-3">Technologies & Protocoles</h6>
+                        <div class="tech-pill-container">
+                            <div class="tech-pill"><i class="fas fa-route"></i> Routage Dynamique (OSPF, BGP)</div>
+                            <div class="tech-pill"><i class="fas fa-exchange-alt"></i> Switch (VLAN, STP)</div>
+                            <div class="tech-pill"><i class="fas fa-shield-alt"></i> Sécurité (VPN IPsec, ACL)</div>
+                            <div class="tech-pill"><i class="fas fa-search"></i> Analyse de flux (Wireshark)</div>
+                            <div class="tech-pill"><i class="fas fa-server"></i> Services (NAT, DHCP, DNS, SMTP)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+    <div class="modal fade" id="modalSkillSystems" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Systèmes d'Information</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                        <i class="fab fa-windows text-danger mb-4" style="font-size: 5rem;"></i>
+                        <p class="text-secondary small text-justify">
+                            Gestion d'infrastructures serveurs et postes clients. Mise en place de politiques de sécurité (GPO) et le support technique utilisateur.
+                        </p>
+                    </div>
+                    <div class="col-md-7 ps-md-4">
+                        <h6 class="fw-bold mb-3">Technologies & Services</h6>
+                        <div class="tech-pill-container">
+                            <div class="tech-pill"><i class="fas fa-users-cog"></i> Active Directory </div>
+                            <div class="tech-pill"><i class="fas fa-server"></i> Services (DNS, DHCP) </div>
+                            <div class="tech-pill"><i class="fas fa-box"></i> Gestion de parc (Ivanti, Wapt)</div>
+                            <div class="tech-pill"><i class="fas fa-hdd"></i> Stockage & Sauvegarde (NAS)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+    <div class="modal fade" id="modalSkillDev" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary"><h5 class="modal-title fw-bold">Développement & Scripting</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4 p-md-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-5 text-center border-end border-secondary border-opacity-25"><i class="fas fa-code text-danger mb-4" style="font-size: 5rem;"></i><p class="text-secondary small">Automatisation de tâches réseaux et création d'interfaces web.</p></div>
+                        <div class="col-md-7 ps-md-4">
+                            <h6 class="fw-bold mb-3">Langages & Frameworks</h6>
+                            <div class="tech-pill-container">
+                                <div class="tech-pill"><i class="fab fa-python"></i> Python</div>
+                                <div class="tech-pill"><i class="fas fa-database"></i> SQL</div>
+                                <div class="tech-pill"><i class="fab fa-html5"></i> HTML / CSS</div>
+                                <div class="tech-pill"><i class="fab fa-bootstrap"></i> Bootstrap </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSkillJava" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Programmation Java</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                        <i class="fab fa-java text-danger mb-4" style="font-size: 5rem;"></i>
+                        <p class="text-secondary small text-justify">
+                            Conception et réalisation de l'application "R&Talk", une plateforme de messagerie instantanée. Mise en place de l'architecture, de la gestion des données et utilisateurs et de la synchronisation.
+                        </p>
+                    </div>
+                    <div class="col-md-7 ps-md-4">
+                        <h6 class="fw-bold mb-3">Concepts & Technologies</h6>
+                        <div class="tech-pill-container">
+                            <div class="tech-pill"><i class="fas fa-plug"></i> Sockets TCP/IP</div>
+                            <div class="tech-pill"><i class="fas fa-tasks"></i> Multithreading (Threads)</div>
+                            <div class="tech-pill"><i class="fas fa-window-restore"></i> Interface Graphique en Java</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+    <div class="modal fade" id="modalSkillVoIP" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Téléphonie IP (VoIP)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                        <i class="fas fa-headset text-danger mb-4" style="font-size: 5rem;"></i>
+                        <p class="text-secondary small text-justify">
+                            Conception, déploiement et gestion d'infrastructures de voix sur IP.
+                        </p>
+                    </div>
+                    <div class="col-md-7 ps-md-4">
+                        <h6 class="fw-bold mb-3">Compétences & Outils</h6>
+                        <div class="tech-pill-container">
+                            <div class="tech-pill"><i class="fas fa-server"></i> IPBX Alcatel </div>
+                            <div class="tech-pill"><i class="fas fa-laptop-house"></i> 3CX & Innovaphone</div>
+                            <div class="tech-pill"><i class="fas fa-network-wired"></i> Protocole SIP </div>
+                            <div class="tech-pill"><i class="fas fa-chart-line"></i> Qualité de Service (QoS)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+    <div class="modal fade" id="modalSkillTelecom" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold">Électronique & Signal</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 text-center border-end border-secondary border-opacity-25">
+                        <i class="fas fa-wave-square text-danger mb-4" style="font-size: 5rem;"></i>
+                        <p class="text-secondary small text-justify">
+                            Caractérisation approfondie de circuits RLC, conception de filtres analogiques et traitement matériel des signaux via l'analyse spectrale et temporelle.
+                        </p>
+                    </div>
+                    <div class="col-md-7 ps-md-4">
+                        <h6 class="fw-bold mb-3">Compétences & Outils</h6>
+                        <div class="tech-pill-container">
+                            <div class="tech-pill"><i class="fas fa-chart-area"></i> Analyse fréquentielle </div>
+                            <div class="tech-pill"><i class="fas fa-microchip"></i> Dipôles & Impédances RLC</div>
+                            <div class="tech-pill"><i class="fas fa-sliders-h"></i> Filtrage & Atténuation</div>
+                            <div class="tech-pill"><i class="fas fa-wave-square"></i> Instrumentation (Oscillo, GBF)</div>
+                            <div class="tech-pill"><i class="fas fa-broadcast-tower"></i> Traitement du signal (FFT)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+    <footer class="py-4 text-center text-secondary border-top border-secondary bg-black"><p class="mb-0">&copy; 2026 Thomas LATTERNER. Tous droits réservés.</p></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
+    <!-- Custom ScrollSpy for Floating Navbar -->
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-                target: '#navbar-example',
-                rootMargin: '0px 0px -40%'
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                if(window.pageYOffset < 100) {
+                    current = "hero";
+                } else {
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        if (pageYOffset >= (sectionTop - 200)) {
+                            current = section.getAttribute("id");
+                        }
+                    });
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
             });
         });
     </script>
-
 </body>
 </html>
-
-
