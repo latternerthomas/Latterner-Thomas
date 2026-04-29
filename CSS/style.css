@@ -1,11 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-:root { --primary-color: #dc3545; --dark-bg: #121212; --card-bg: #1e1e1e; --text-grey: #b3b3b3; --border-color: #333; }
-body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: white; overflow-x: hidden; }
-html { scroll-padding-top: 120px; scroll-behavior: smooth; }
+
+:root { 
+    --primary-color: #dc3545; 
+    --dark-bg: #121212; 
+    --card-bg: #1e1e1e; 
+    --text-grey: #b3b3b3; 
+    --border-color: #333; 
+}
+
+/* =========================================
+   FOND D'ÉCRAN GLOBAL (MODE NUIT PAR DÉFAUT)
+   ========================================= */
+body { 
+    font-family: 'Poppins', sans-serif; 
+    /* L'image de nuit est fixée sur tout le corps de la page */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/black-white-background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; /* L'image ne bouge pas au défilement */
+    color: white; 
+    overflow-x: hidden; 
+}
+
+html { 
+    scroll-padding-top: 120px; 
+    scroll-behavior: smooth; 
+}
+
 .section-padding { padding: 100px 0; }
 .text-justify { text-align: justify; }
 
-/* NOUVEAU MENU FLOTTANT (GLASSMORPHISM) */
+/* Rend toutes les sections transparentes pour voir le fond du body */
+.bg-dark, .bg-black, section {
+    background-color: transparent !important;
+}
+
+/* On garde un léger fond sombre sur les cartes pour qu'elles restent lisibles (Mode Nuit) */
+.content-card, .card-custom, .skill-card-v3, .hobby-card, .contact-form {
+    background-color: rgba(30, 30, 30, 0.7) !important; /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Effet de flou derrière les cartes */
+}
+
+/* =========================================
+   SÉPARATEURS DE SECTIONS (COURTS ET CENTRÉS)
+   ========================================= */
+/* 1. On écrase spécifiquement la classe Bootstrap pour faire disparaître la longue ligne */
+section.border-top, footer.border-top {
+    border-top: 0 !important;
+}
+
+section, footer {
+    position: relative; /* Nécessaire pour placer la petite barre par rapport à la section */
+}
+
+/* 2. On crée la nouvelle barre personnalisée */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;             
+    left: 50%;          
+    transform: translateX(-50%);
+    width: 500px;       /* Longueur de la barre */
+    height: 2px;        /* Épaisseur de la barre */
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur grise discrète en mode nuit */
+    border-radius: 10px;
+}
+
+/* 3. On ne met pas de barre sur la toute première section (Accueil) */
+#hero::before {
+    display: none;
+}
+
+/* =========================================
+   HERO (ACCUEIL)
+   ========================================= */
+/* On vide le fond du hero puisqu'il est déjà au fond du body */
+#hero { 
+    height: 100vh; 
+    background: transparent !important; 
+}
+
+/* =========================================
+   MENU FLOTTANT
+   ========================================= */
 .navbar-floating { background: rgba(18, 18, 18, 0.75) !important; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px; padding: 12px 25px !important; transition: all 0.3s ease; }
 .navbar-dark .navbar-nav .nav-link { color: rgba(255, 255, 255, 0.6) !important; font-weight: 500; margin: 0 8px; position: relative; transition: 0.3s ease; }
 .navbar-dark .navbar-nav .nav-link:hover { color: white !important; }
@@ -14,11 +91,10 @@ html { scroll-padding-top: 120px; scroll-behavior: smooth; }
 .navbar-dark .navbar-nav .nav-link.active::after { width: 60%; }
 @media (max-width: 991px) { .navbar-floating { border-radius: 20px; padding: 15px !important; } .navbar-dark .navbar-nav .nav-link { margin: 5px 0; } .navbar-dark .navbar-nav .nav-link.active::after { width: 40px; left: 20px; } }
 
-/* HERO */
-#hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('../images/black-white-background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
-
-/* CARDS & TIMELINE */
-.content-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; }
+/* =========================================
+   FRISE CHRONOLOGIQUE
+   ========================================= */
+.content-card { border: 1px solid var(--border-color); border-radius: 15px; }
 .timeline { position: relative; padding-left: 30px; list-style: none; }
 .timeline::before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: var(--primary-color); opacity: 0.3; }
 .timeline-item { position: relative; padding-bottom: 30px; }
@@ -27,17 +103,40 @@ html { scroll-padding-top: 120px; scroll-behavior: smooth; }
 .timeline-title { font-size: 1.1rem; font-weight: 600; color: white; margin-bottom: 5px; }
 .timeline-text { font-size: 0.95rem; color: var(--text-grey); }
 
-/* PORTFOLIO CARDS */
-.card-custom { background: var(--card-bg); border-radius: 15px; overflow: hidden; height: 100%; border: 1px solid var(--border-color); transition: 0.3s; }
+/* =========================================
+   PORTFOLIO & CARROUSELS
+   ========================================= */
+.card-custom { border-radius: 15px; overflow: hidden; height: 100%; border: 1px solid var(--border-color); transition: 0.3s; }
 .card-custom:hover { transform: translateY(-10px); border-color: var(--primary-color); }
 .card-img-holder { height: 200px; overflow: hidden; }
 .card-img-holder img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
 .card-custom:hover img { transform: scale(1.1); }
 .card-body-custom { padding: 25px; }
 
-/* SKILLS GLOW */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon { 
+    filter: none !important; /* Laisse le blanc par défaut de Bootstrap */
+}
+.carousel-control-prev:hover, 
+.carousel-control-next:hover { 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* En Mode Jour : Flèches Noires avec un léger fond noir au survol */
+body.light-mode .carousel-control-prev-icon, 
+body.light-mode .carousel-control-next-icon { 
+    filter: invert(1) grayscale(100%) brightness(0%) !important; 
+}
+body.light-mode .carousel-control-prev:hover, 
+body.light-mode .carousel-control-next:hover { 
+    background-color: rgba(0, 0, 0, 0.05); 
+}
+
+/* =========================================
+   COMPÉTENCES
+   ========================================= */
 .category-title { font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; text-align: center; color: var(--primary-color); }
-.skill-card-v3 { background: linear-gradient(145deg, var(--card-bg) 0%, #151515 100%); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 35px 20px; text-align: center; position: relative; overflow: hidden; cursor: pointer; transition: 0.4s; height: 100%; }
+.skill-card-v3 { border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 35px 20px; text-align: center; position: relative; overflow: hidden; cursor: pointer; transition: 0.4s; height: 100%; }
 .skill-card-v3::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--border-color); transition: 0.4s; }
 .skill-card-v3:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.6); }
 .skill-card-v3:hover::before { background: var(--primary-color); box-shadow: 0 0 15px var(--primary-color); }
@@ -50,42 +149,163 @@ html { scroll-padding-top: 120px; scroll-behavior: smooth; }
 .tech-pill i { margin-right: 8px; color: var(--primary-color); }
 .tech-pill:hover { border-color: var(--primary-color); color: white; }
 
-/* CERTIFICATIONS */
-.certif-card { transition: all 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); background: linear-gradient(145deg, var(--card-bg) 0%, #151515 100%); position: relative; overflow: hidden; }
+/* =========================================
+   CERTIFICATIONS
+   ========================================= */
+.certif-card { transition: all 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); position: relative; overflow: hidden; }
 .certif-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--border-color); transition: all 0.4s ease; }
 .certif-card:hover { border-color: #ffc107; transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 193, 7, 0.15); }
 .certif-card:hover::before { background: #ffc107; box-shadow: 0 0 15px #ffc107; }
 .certif-badge-img { max-width: 140px; transition: all 0.4s ease; filter: drop-shadow(0 0 10px rgba(255, 193, 7, 0.2)); }
 .certif-card:hover .certif-badge-img { transform: scale(1.08) rotate(5deg); filter: drop-shadow(0 0 25px rgba(255, 193, 7, 0.6)); }
 
-/* HOBBIES & CONTACT */
-.hobby-card { background-color: var(--card-bg); border: 2px solid var(--primary-color); border-radius: 15px; padding: 2rem; transition: 0.3s; height: 100%; }
+/* =========================================
+   HOBBIES & CONTACT
+   ========================================= */
+.hobby-card { border: 2px solid var(--primary-color); border-radius: 15px; padding: 2rem; transition: 0.3s; height: 100%; }
 .hobby-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2); }
-.contact-form { background-color: var(--card-bg); border: 1px solid var(--border-color); }
+.contact-form { border: 1px solid var(--border-color); }
 .form-control.dark-input { background-color: var(--dark-bg); border: 1px solid #333; color: white; border-radius: 10px; }
 .btn-circle { width: 45px; height: 45px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; }
 .contact-link:hover .btn-circle { background-color: var(--primary-color); border-color: var(--primary-color); transform: translateY(-5px); }
 .input-icon-wrapper { position: relative; }
-.input-icon-wrapper i {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    font-size: 1.2rem;
-    pointer-events: none; /* Empeche l'icone de bloquer le clic sur l'input */
+.input-icon-wrapper i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); z-index: 10; font-size: 1.2rem; pointer-events: none; }
+.input-icon-wrapper.textarea-wrapper i { top: 25px; transform: none; }
+.input-icon-wrapper .form-control { padding-left: 55px !important; }
+.input-icon-wrapper label { padding-left: 55px !important; }
+.dark-input::placeholder { color: var(--text-grey) !important; opacity: 1; }
+
+/* =========================================
+   OPTIMISATION MOBILE
+   ========================================= */
+@media (max-width: 768px) {
+    .skill-card-v3 { padding: 20px 15px !important; min-height: auto !important; }
+    .skill-card-v3 i.card-icon { font-size: 2.2rem !important; margin-bottom: 10px !important; }
+    .skill-card-v3 h5 { font-size: 1.1rem !important; margin-bottom: 8px !important; }
+    .skill-card-v3 p.small { font-size: 0.85rem !important; line-height: 1.4 !important; }
+    .skill-badge { top: 10px !important; right: 10px !important; font-size: 0.65rem !important; padding: 4px 8px !important; }
 }
-.input-icon-wrapper.textarea-wrapper i {
-    top: 25px;
-    transform: none;
+
+/* =========================================
+   MODE JOUR (LIGHT MODE)
+   ========================================= */
+
+/* Transition douce lors du clic sur le bouton Jour/Nuit */
+body, section, div, h1, h2, h3, h4, h5, h6, p, span, a, i, .content-card, .card-custom, .modal-content {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.input-icon-wrapper .form-control {
-    padding-left: 55px !important;
+
+body.light-mode {
+    /* Image Mode Jour fixée au fond */
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('../images/fond_ecran_jour.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    color: #212529;
 }
-.input-icon-wrapper label {
-    padding-left: 55px !important;
+
+/* Forcer le texte blanc à devenir sombre */
+body.light-mode .text-white,
+body.light-mode h1, body.light-mode h2, body.light-mode h3, 
+body.light-mode h4, body.light-mode h5, body.light-mode p {
+    color: #212529 !important;
 }
-.dark-input::placeholder {
-    color: var(--text-grey) !important;
-    opacity: 1; 
+
+/* Les cartes deviennent blanches et semi-transparentes (Effet Verre) */
+body.light-mode .content-card, 
+body.light-mode .card-custom, 
+body.light-mode .skill-card-v3, 
+body.light-mode .hobby-card, 
+body.light-mode .contact-form,
+body.light-mode .modal-content,
+body.light-mode .compétences-box,
+body.light-mode .certif-card {
+    background-color: rgba(255, 255, 255, 0.85) !important; /* Blanc transparent */
+    backdrop-filter: blur(12px) !important; /* Flou sur l'image derrière */
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .skill-card-v3:hover,
+body.light-mode .certif-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+/* Adaptation du menu flottant */
+body.light-mode .navbar-floating {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+body.light-mode .navbar-brand,
+body.light-mode .navbar-nav .nav-link {
+    color: #212529 !important;
+}
+body.light-mode .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Boutons spéciaux et formulaires */
+body.light-mode .btn-outline-light { color: #212529; border-color: #212529; }
+body.light-mode .btn-outline-light:hover { background-color: #212529; color: #ffffff !important; }
+body.light-mode .dark-input { background-color: #ffffff; color: #212529; border: 1px solid #ced4da; }
+body.light-mode .dark-input::placeholder { color: #6c757d !important; }
+
+/* =========================================
+   CORRECTION DE LA CROIX DES MODALES
+   ========================================= */
+/* La croix blanche de base devient noire en mode jour */
+body.light-mode .btn-close-white { 
+    filter: invert(1) grayscale(100%) brightness(0%) !important; 
+    opacity: 0.7 !important;
+}
+/* On la rend 100% noire au passage de la souris */
+body.light-mode .btn-close-white:hover { 
+    opacity: 1 !important; 
+}
+
+/* Séparateur pour le mode jour */
+body.light-mode section::before {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+/* Frise chronologique */
+body.light-mode .timeline-title { color: #212529 !important; }
+body.light-mode .timeline-text { color: #495057 !important; }
+body.light-mode .timeline-date { color: var(--primary-color) !important; font-weight: 600; }
+body.light-mode .timeline { border-left: 2px solid #dee2e6 !important; }
+body.light-mode .timeline-item::before { background-color: var(--primary-color) !important; border: 3px solid #ffffff !important; }
+
+/* Ajustement des couleurs dans les cartes de compétences */
+body.light-mode .skill-card-v3 i.card-icon { color: #343a40 !important; }
+body.light-mode .skill-card-v3:hover i.card-icon { color: var(--primary-color) !important; }
+body.light-mode .skill-card-v3 p.text-secondary,
+body.light-mode .modal-body p.text-secondary,
+body.light-mode .modal-body .text-secondary { color: #495057 !important; }
+body.light-mode .skill-card-v3:hover p.text-secondary,
+body.light-mode .skill-card-v3:hover h5.text-white { color: #000000 !important; }
+
+/* Pilules de compétences */
+body.light-mode .tech-pill {
+    background-color: #f8f9fa !important;
+    border-color: #ced4da !important;
+    color: #212529 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+body.light-mode .tech-pill:hover {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background-color: rgba(220, 53, 69, 0.05) !important;
+}
+
+body:not(.light-mode) .modal-content {
+    background-color: #1e1e1e !important; /* Gris très foncé / Noir */
+    backdrop-filter: none !important;     /* Désactive la transparence */
+    border: 1px solid #333 !important;    /* Petite bordure propre */
+}
+
+body.light-mode .text-danger,
+body.light-mode h4.text-danger,
+body.light-mode h5.text-danger,
+body.light-mode .modal-title.text-danger {
+    color: var(--primary-color) !important;
 }
