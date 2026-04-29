@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- NOUVEAU MENU FLOTTANT (Pillule Glassmorphism) -->
+    <!-- NOUVEAU MENU FLOTTANT -->
     <div class="container fixed-top mt-3" style="z-index: 1030;">
         <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark navbar-floating shadow-lg">
             <div class="container-fluid px-3">
@@ -29,6 +29,9 @@
                         <li class="nav-item"><a class="nav-link" href="#hobbies">Intérêts</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
+                    <button id="theme-toggle" class="btn btn-link text-warning ms-lg-4 p-0 text-decoration-none" style="font-size: 1.3rem;" title="Changer de thème">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -50,7 +53,6 @@
     <!-- PROFIL SECTION -->
     <section id="about" class="section-padding bg-dark text-white">
         <div class="container">
-            <!-- BLOC FUSIONNÉ : Photo + Identité + Alternance -->
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-10">
                     <div class="content-card p-4 p-md-5">
@@ -152,7 +154,9 @@
                 <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
                 <p class="text-secondary mt-2">Cliquez sur un domaine pour voir les projets en détail.</p>
             </div>
+            
             <div class="row g-4 justify-content-center">
+                
                 <div class="col-md-6 col-lg-4">
                     <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalReseau1">
                         <div class="card-img-holder"><img src="images/reseau1.png" alt="Architecture Réseau"></div>
@@ -164,31 +168,44 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4">
                     <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalTelecom1">
-                        <div class="card-img-holder"><img src="images/physique.png" alt="Transmission Télécoms"></div>
+                        <div class="card-img-holder"><img src="images/Physique1.jpg" alt="Transmission de signal"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-warning text-dark mb-2">Télécoms & Signal</span>
-                            <h5>Électronique & Filtrage</h5>
-                            <p class="small text-secondary">Étude d'impédances, diagrammes de Bode et analyse FFT sur oscilloscope.</p>
-                            <span class="text-warning small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
+                            <span class="badge bg-danger mb-2">Télécommunications</span>
+                            <h5>Infrastructures de Transmission</h5>
+                            <p class="small text-secondary">Ateliers pratiques sur les supports de transmission : caractérisation de lignes cuivre, configuration xDSL, soudure optique et analyse de réseaux FTTx.</p>
+                            <span class="text-danger small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4">
                     <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalTelephonie1">
-                        <div class="card-img-holder"><img src="images/telephone.png" alt="Téléphonie IP"></div>
+                        <div class="card-img-holder"><img src="images/telephone.jpg" alt="Téléphonie IP"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-info text-dark mb-2">Téléphonie</span>
-                            <h5>Déploiement VoIP & PABX</h5>
-                            <p class="small text-secondary">Configuration Alcatel (OXO/OXE) et analyse QoS.</p>
-                            <span class="text-info small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
+                            <span class="badge bg-danger mb-2">Téléphonie</span>
+                            <h5>Infrastructures VoIP & PABX</h5>
+                            <p class="small text-secondary">Ateliers de Déploiement : Apprentissage du câblage et administration de serveurs 3CX, Alcatel, Avaya et Innovaphone.</p>
+                            <span class="text-danger small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalJavaTalk">
+                        <div class="card-img-holder"><img src="images/rtalk-main.png" alt="R&Talk Java"></div>
+                        <div class="card-body-custom">
+                            <span class="badge bg-danger mb-2">Développement</span>
+                            <h5>R&Talk - Messagerie Java</h5>
+                            <p class="small text-secondary">Application client-serveur multithreadée avec interface graphique et base de données MySQL.</p>
+                            <span class="text-danger small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div> </section>
 
     <!-- SKILLS SECTION -->
     <section id="skills" class="section-padding bg-dark text-white border-top border-secondary">
@@ -437,71 +454,230 @@
     </div>
     
     <div class="modal fade" id="modalTelecom1" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark text-white border-secondary">
-                <div class="modal-header border-secondary"><h5 class="modal-title text-warning">Électronique & Filtrage de Signaux</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-                <div class="modal-body p-4">
-                    <div class="row g-4">
-                        <div class="col-lg-7">
-                            <img src="images/physique.png" class="img-fluid rounded border border-secondary w-75 mx-auto d-block" alt="Analyse de signal sur oscilloscope">
-                            <h4 class="text-warning h5 mb-3 mt-4">Détails des Projets (TP2 & TP4)</h4>
-                            <p class="text-secondary small text-justify">
-                                Ces travaux pratiques se concentrent sur la caractérisation de composants électroniques et le traitement matériel des signaux.
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-danger fw-bold"><i class="fas fa-broadcast-tower me-2"></i> Transmission de Signal</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                    
+                    <div class="col-lg-6">
+                        <div id="carouselTelecom" class="carousel slide rounded shadow border border-secondary overflow-hidden w-100 bg-black" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/Physique1.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Physique2.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Physique3.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 3">
+                                </div>
+								<div class="carousel-item">
+                                    <img src="images/Physique4.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 4">
+                                </div>
+								<div class="carousel-item">
+                                    <img src="images/Physique5.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 5">
+                                </div>
+								<div class="carousel-item">
+                                    <img src="images/Physique6.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 6">
+                                </div>
+								<div class="carousel-item">
+                                    <img src="images/Physique7.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Schéma Transmission 7">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTelecom" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselTelecom" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column gap-4">
+                        
+                        <div class="contexte-box">
+                            <h4 class="text-danger h5 mb-3 fw-bold"><i class="fas fa-microchip me-2"></i>Ateliers Pratiques de Transmission</h4>
+                            <p class="text-secondary text-justify small mb-0">
+                                Cette série de travaux pratiques m'a permis d'explorer les technologies de transmission de données.</br> 
+								J'ai manipulé et testé différents supports physiques, des câbles en cuivre pour les technologies ADSL/VDSL jusqu'aux architectures modernes en fibre optique (FTTH et FTTLA).</br> 
+								J'ai appris à diagnostiquer la qualité d'une liaison, à réaliser des soudures de précision et à utiliser des appareils de mesure professionnels pour garantir un débit optimal.
                             </p>
-                            <ul class="text-secondary small">
-                                <li class="mb-2"><strong>Impédances Complexes :</strong> Étude théorique et pratique des dipôles (L-R, C-L-R). Mesure du déphasage et du retard temporel entre la tension et le courant sur différentes fréquences.</li>
-                                <li class="mb-2"><strong>Caractérisation de Filtres :</strong> Identification de filtres inconnus. Calcul de la fréquence de coupure (-3dB) et tracé des diagrammes de Bode pour déterminer la pente et l'ordre du filtre.</li>
-                                <li><strong>Analyse Spectrale :</strong> Filtrage de signaux complexes et observation du spectre fréquentiel à l'aide de la fonction FFT de l'oscilloscope.</li>
+                        </div>
+
+                        <div class="compétences-box p-4 rounded bg-secondary bg-opacity-10 border border-secondary">
+                            <h4 class="text-danger h5 mb-4 fw-bold"><i class="fas fa-tools me-2"></i>Compétences & Technologies</h4>
+                            <ul class="list-unstyled mb-0 text-secondary small">
+                                <li class="mb-4">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-search-location text-danger me-2"></i>Mesures & Réflectométrie</strong>
+                                    Utilisation d'appareils professionnels (OTDR, iOLM) pour localiser des défauts sur la fibre et analyser les pertes de signal (atténuation, épissures).
+                                </li>
+                                <li class="mb-4">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-network-wired text-danger me-2"></i>Réseaux d'Accès (xDSL & FTTx)</strong>
+                                    Configuration d'équipements centraux (DSLAM, CMTS) et tests de synchronisation pour valider le fonctionnement des accès haut débit des abonnés.
+                                </li>
+                                <li class="mb-0">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-fire text-danger me-2"></i>Raccordement & Soudure Optique</strong>
+                                    Préparation des fibres, manipulation de cliveuse et réalisation de soudures par fusion avec une soudeuse optique de précision.
+                                </li>
                             </ul>
                         </div>
-                        <div class="col-lg-5">
-                            <div class="p-4 rounded bg-secondary bg-opacity-10 border border-secondary mb-4">
-                                <h4 class="text-warning h5 mb-3"><i class="fas fa-tools me-2"></i>Matériel maîtrisé</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="modalTelephonie1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-danger fw-bold"><i class="fas fa-phone-alt me-2"></i> Infrastructures de Téléphonie d'Entreprise</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row g-4 align-items-center"> <div class="col-lg-6">
+                        <div id="carouselTelephonie" class="carousel slide rounded shadow border border-secondary overflow-hidden w-100 bg-black" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/telephone.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Téléphone IP 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/telephone1.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Téléphone IP 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/telephone2.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Téléphone IP 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/cable.jpg" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Baie de brassage">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTelephonie" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselTelephonie" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column gap-4">
+                        
+                        <div class="contexte-box">
+                            <h4 class="text-danger h5 mb-3 fw-bold"><i class="fas fa-project-diagram me-2"></i>Exploration & Configuration</h4>
+                            <p class="text-secondary text-justify small mb-0">
+                                Ce projet regroupe une série d'ateliers pratiques axés sur la découverte et la mise en œuvre de solutions de téléphonie. </br>
+								J'ai appris à mettre en place le câblage physique dans les baies informatiques jusqu'à l'installation et la programmation des serveurs de communication. </br>
+								J'ai pu configurer avec mon binôme différents types de téléphones comme des postes fixes, sans fil ou applications sur PC pour les rendre totalement opérationnels.
+                            </p>
+                        </div>
+
+                        <div class="compétences-box p-4 rounded bg-secondary bg-opacity-10 border border-secondary">
+                            <h4 class="text-danger h5 mb-4 fw-bold"><i class="fas fa-tools me-2"></i>Compétences & Technologies</h4>
+                            <ul class="list-unstyled mb-0 text-secondary small">
+                                <li class="mb-4">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-server text-danger me-2"></i>Administration Multi-Constructeurs</strong>
+                                    Déploiement et configuration complète de PABX/IPBX sur Alcatel OXO, Avaya IP Office, 3CX, Innovaphone et Aastra/Mitel.
+                                </li>
+                                <li class="mb-4">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-exchange-alt text-danger me-2"></i>Protocoles & Services VoIP</strong>
+                                    Mise en œuvre du protocole SIP (et trunks SIP), signalisation H.323, Serveurs Vocaux Interactifs (SVI) et messagerie vocale.
+                                </li>
+                                <li class="mb-0">
+                                    <strong class="text-white d-block mb-1"><i class="fas fa-network-wired text-danger me-2"></i>Infrastructures Physiques</strong>
+                                    Câblage cuivre, brassage en armoire, identification de paires (RJ45/RJ11) et tests de continuité des liens de transmission.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalJavaTalk" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-danger fw-bold"><i class="fab fa-java me-2"></i> R&Talk - Messagerie Instantanée</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4 align-items-center">
+                        
+                        <div class="col-lg-6">
+                            <div id="carouselJavaTalk" class="carousel slide rounded shadow border border-secondary overflow-hidden w-100 bg-black" data-bs-ride="carousel" data-bs-interval="3500">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/rtalk-main.png" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Interface Principale">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/rtalk-login.png" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Page de connexion">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/rtalk-mld.png" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Modèle Logique de Données">
+                                    </div>
+									<div class="carousel-item">
+                                        <img src="images/rtalk-create.png" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Page de création de compte">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselJavaTalk" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Précédent</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselJavaTalk" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Suivant</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-flex flex-column gap-4">
+                            
+                            <div class="contexte-box">
+                                <h4 class="text-danger h5 mb-3 fw-bold"><i class="fas fa-project-diagram me-2"></i>Conception Client-Serveur</h4>
+                                <p class="text-secondary text-justify small mb-0">
+                                    Projet réalisé en binôme visant à concevoir une application de messagerie complète en Java.</br> 
+                                    Ce système repose sur une architecture client-serveur multithreadée permettant de gérer simultanément plusieurs utilisateurs sans blocage.</br>
+                                    L'interface graphique, remplaçant la console classique, permet la gestion de l'authentification, la navigation entre canaux publics ou discussions privées, et la synchronisation en temps réel de l'historique via une base de données MySQL.</br>
+                                </p>
+                            </div>
+
+                            <div class="compétences-box p-4 rounded bg-secondary bg-opacity-10 border border-secondary">
+                                <h4 class="text-danger h5 mb-4 fw-bold"><i class="fas fa-tools me-2"></i>Caractéristiques Techniques</h4>
                                 <ul class="list-unstyled mb-0 text-secondary small">
-                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Oscilloscope numérique (mesures temporelles et FFT).</li>
-                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Générateur Basses Fréquences (GBF).</li>
-                                    <li class="mb-2"><i class="fas fa-check text-warning me-2"></i>Composants RLC.</li>
-                                    <li class="mb-0"><i class="fas fa-check text-warning me-2"></i>Traitement de données sur Excel.</li>
+                                    <li class="mb-4">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-network-wired text-danger me-2"></i>Sockets & Multithreading</strong>
+                                        Le serveur maintient les connexions actives via TCP/IP et gère le multipoint avec des threads dédiés pour chaque client, assurant une communication asynchrone fluide.
+                                    </li>
+                                    <li class="mb-4">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-database text-danger me-2"></i>Base de Données MySQL</strong>
+                                        Conception d'un MLD robuste (Tables: Utilisateurs, Groupes, Messages, Lu_par) pour stocker les logs, récupérer les derniers messages et gérer les accès.
+                                    </li>
+                                    <li class="mb-0">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-desktop text-danger me-2"></i>Interface Graphique (IHM)</strong>
+                                        Développement d'une interface utilisateur (JFrame) gérant l'inscription, la connexion, le filtrage des messages par groupe, et l'affichage dynamique des conversations.
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalTelephonie1" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark text-white border-secondary">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title text-info"><i class="fas fa-phone-alt me-2"></i> Déploiement et Configuration de Systèmes VoIP</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="row g-4">
-                        <div class="col-lg-7">
-                            <img src="images/telephone.png" class="img-fluid rounded shadow mb-4 border border-secondary w-75 mx-auto d-block" alt="Téléphone IP Alcatel">
-                            <h4 class="text-info h5 mb-3"><i class="fas fa-project-diagram me-2"></i>Détails du Projet</h4>
-                            <p class="text-secondary text-justify">
-                                Ce projet porte sur l'administration et la mise en œuvre de solutions de téléphonie sur IP (VoIP) professionnelles. J'ai configuré des architectures basées sur des PABX <strong>Alcatel-Lucent Enterprise (ALE)</strong>, notamment les systèmes OmniPCX Office (OXO) et OmniPCX Enterprise (OXE).
-                            </p>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="p-4 rounded bg-secondary bg-opacity-10 border border-secondary mb-4">
-                                <h4 class="text-info h5 mb-3"><i class="fas fa-tools me-2"></i>Compétences acquises</h4>
-                                <ul class="list-unstyled mb-0 text-secondary small">
-                                    <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Administration de PABX Alcatel (OXO/OXE).</li>
-                                    <li class="mb-2"><i class="fas fa-check text-info me-2"></i>Analyse de protocoles de signalisation (SIP, H.323).</li>
-                                    <li class="mb-0"><i class="fas fa-check text-info me-2"></i>Mise en réseau et diagnostic QoS.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- MODALES COMPÉTENCES -->
     <div class="modal fade" id="modalSkillNetwork" tabindex="-1" aria-hidden="true">
@@ -705,6 +881,36 @@
                         link.classList.add("active");
                     }
                 });
+            });
+        });
+    </script>
+	
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById("theme-toggle");
+            const icon = themeToggle.querySelector("i");
+            const body = document.body;
+
+            // Vérifier s'il y a un thème déjà sauvegardé
+            if (localStorage.getItem("theme") === "light") {
+                body.classList.add("light-mode");
+                icon.classList.replace("fa-sun", "fa-moon");
+                themeToggle.classList.replace("text-warning", "text-dark");
+            }
+
+            // Action au clic sur le bouton
+            themeToggle.addEventListener("click", function() {
+                body.classList.toggle("light-mode");
+                
+                if (body.classList.contains("light-mode")) {
+                    icon.classList.replace("fa-sun", "fa-moon");
+                    themeToggle.classList.replace("text-warning", "text-dark");
+                    localStorage.setItem("theme", "light"); // Sauvegarde
+                } else {
+                    icon.classList.replace("fa-moon", "fa-sun");
+                    themeToggle.classList.replace("text-dark", "text-warning");
+                    localStorage.setItem("theme", "dark"); // Sauvegarde
+                }
             });
         });
     </script>
