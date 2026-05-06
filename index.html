@@ -159,11 +159,11 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="card-custom" data-bs-toggle="modal" data-bs-target="#modalReseau1">
-                        <div class="card-img-holder"><img src="images/reseau1.png" alt="Architecture Réseau"></div>
+                        <div class="card-img-holder"><img src="images/Réseau.png" alt="Topologie Réseau Multi-Sites"></div>
                         <div class="card-body-custom">
-                            <span class="badge bg-danger mb-2">Réseaux</span>
-                            <h5>Architecture & Sécurisation</h5>
-                            <p class="small text-secondary">Routage dynamique (OSPF), DMZ et VPN IPsec de site à site.</p>
+                            <span class="badge bg-danger mb-2">Réseaux & Sécurité</span>
+                            <h5>Architecture Multi-Sites</h5>
+                            <p class="small text-secondary">Conception globale d'une PME sur Packet Tracer : OSPF, DMZ, NAT/PAT, ACLs et tunnel VPN IPsec.</p>
                             <span class="text-danger small fw-bold">Voir les détails <i class="fas fa-plus ms-1"></i></span>
                         </div>
                     </div>
@@ -328,6 +328,26 @@
                         </div>
                     </div>
                 </div>
+				<div class="col-lg-6">
+                    <div class="content-card p-4 p-md-5 certif-card h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-xl-4 text-center mb-4 mb-xl-0">
+                                <img src="images/learnathon.png" alt="Badge Cisco Learn-A-Thon 2026" class="img-fluid certif-badge-img rounded-circle" style="max-width: 140px;">
+                            </div>
+                            <div class="col-xl-8 text-center text-xl-start">
+                                <span class="badge bg-success mb-3 fw-bold px-3 py-2">Nouveau</span>
+                                <h4 class="fw-bold mb-2">Cisco Learn-A-Thon 2026</h4>
+                                <h6 class="text-secondary mb-3"><i class="fas fa-medal me-2"></i>Cisco Networking Academy</h6>
+                                <p class="text-secondary small mb-4 text-justify">
+                                    Participation au challenge d'apprentissage intensif Cisco. Cette distinction valide mon engagement dans la formation continue et l'acquisition proactive de nouvelles compétences techniques sur les technologies réseaux et cybersécurité.
+                                </p>
+                                <a href="https://www.credly.com/earner/earned/badge/06ec015a-cd26-4cfc-93ec-0751e1043a30" target="_blank" class="btn btn-outline-success rounded-pill btn-sm px-4 py-2 fw-bold w-100">
+                                    <i class="fas fa-external-link-alt me-2"></i> Voir sur Credly
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -439,14 +459,48 @@
     <div class="modal fade" id="modalReseau1" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content bg-dark text-white border-secondary">
-                <div class="modal-header border-secondary"><h5 class="modal-title text-danger">Architecture & Sécurisation</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-danger fw-bold"><i class="fas fa-network-wired me-2"></i> Architecture Multi-Sites & Sécurisation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body p-4">
-                    <div class="row g-4">
-                        <div class="col-lg-7"><img src="images/reseau1.png" class="img-fluid rounded border border-secondary" alt="Cisco"></div>
-                        <div class="col-lg-5">
-                            <h4 class="text-danger h5 mb-3">Détails du Projet</h4>
-                            <p class="text-secondary small">Simulation réseau complète sur Cisco Packet Tracer : Routage OSPF, DMZ, et Tunnel VPN IPsec pour sécuriser les flux inter-sites.</p>
+                    <div class="row g-4 align-items-center">
+                        
+                        <div class="col-lg-6">
+                            <div class="rounded shadow border border-secondary overflow-hidden w-100 bg-black p-2">
+                                <img src="images/Réseau.png" class="d-block w-100 object-fit-contain" style="height: 450px;" alt="Topologie Packet Tracer">
+                            </div>
                         </div>
+
+                        <div class="col-lg-6 d-flex flex-column gap-4">
+                            
+                            <div class="contexte-box">
+                                <h4 class="text-danger h5 mb-3 fw-bold"><i class="fas fa-project-diagram me-2"></i>Conception globale sur Packet Tracer</h4>
+                                <p class="text-secondary text-justify small mb-0">
+                                    Ce projet regroupe le déploiement de A à Z d'une infrastructure réseau réaliste interconnectant le réseau privé d'une entreprise, une université et le réseau public (Internet).</br>
+									L'objectif était d'assurer le routage de l'information tout en garantissant un haut niveau de sécurité avec filtrage et DMZ.
+                                </p>
+                            </div>
+
+                            <div class="compétences-box p-4 rounded bg-secondary bg-opacity-10 border border-secondary">
+                                <h4 class="text-danger h5 mb-4 fw-bold"><i class="fas fa-shield-alt me-2"></i>Déploiements & Sécurisation</h4>
+                                <ul class="list-unstyled mb-0 text-secondary small">
+                                    <li class="mb-4">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-route text-danger me-2"></i>Routage & NAT/PAT</strong>
+                                        Mise en place d'un routage dynamique OSPF au cœur du réseau. Configuration du NAT/PAT pour permettre l'accès à Internet aux réseaux locaux et redirections de ports (Port Forwarding) pour exposer les services de la DMZ (Web, DNS, Mail).
+                                    </li>
+                                    <li class="mb-4">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-user-shield text-danger me-2"></i>Filtrage par ACL (Access Control Lists)</strong>
+                                        Création d'ACL étendues appliquées sur les pare-feux pour contrôler les flux entrants et sortants. Blocage du trafic indésirable, autorisation ciblée des ports (80, 53, 25, 110) et filtrage avec état.
+                                    </li>
+                                    <li class="mb-0">
+                                        <strong class="text-white d-block mb-1"><i class="fas fa-key text-danger me-2"></i>Tunnel VPN IPsec & Services Sécurisés</strong>
+                                        Établissement d'un VPN IPsec (site-à-site) négocié via ISAKMP et chiffré via ESP pour lier les sites distants. Intégration de certificats pour sécuriser les protocoles HTTPS, SMTPS et IMAPS.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
