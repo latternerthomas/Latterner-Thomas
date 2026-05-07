@@ -254,3 +254,5 @@ body.light-mode .carousel-control-prev:hover, body.light-mode .carousel-control-
 body:not(.light-mode) .modal-content { background-color: #1e1e1e !important; backdrop-filter: none !important; border: 1px solid #333 !important; }
 
 body.light-mode .text-danger, body.light-mode h4.text-danger, body.light-mode h5.text-danger, body.light-mode .modal-title.text-danger { color: var(--primary-color) !important; }
+
+
