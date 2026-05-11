@@ -66,7 +66,15 @@ section::before {
 }
 
 /* --- MENU --- */
-.navbar-floating { background: rgba(18, 18, 18, 0.75) !important; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50px; padding: 12px 25px !important; transition: all 0.3s ease; }
+.navbar-floating { 
+    background: rgba(18, 18, 18, 0.75) !important; 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    border-radius: 50px; 
+    padding: 12px 25px !important; 
+    transition: all 0.3s ease; 
+}
 
 .navbar-dark .navbar-nav .nav-link { 
     color: rgba(255, 255, 255, 0.6) !important; 
@@ -76,7 +84,6 @@ section::before {
     transition: 0.3s ease; 
 }
 
-/* Hover Mode Nuit */
 .navbar-dark .navbar-nav .nav-link:hover { 
     color: var(--primary-color) !important; 
 }
@@ -94,10 +101,7 @@ section::before {
     border-radius: 5px; 
 }
 
-.navbar-dark .navbar-nav .nav-link:hover::after { 
-    width: 60%; 
-}
-
+.navbar-dark .navbar-nav .nav-link:hover::after { width: 60%; }
 .navbar-dark .navbar-nav .nav-link.active { color: white !important; font-weight: 600; }
 .navbar-dark .navbar-nav .nav-link.active::after { width: 60%; }
 
@@ -139,32 +143,35 @@ section::before {
 .skill-card-v3:hover i.card-icon { color: var(--primary-color); transform: scale(1.1); }
 .skill-badge { position: absolute; top: 15px; right: 15px; font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.05); color: var(--text-grey); }
 .skill-card-v3:hover .skill-badge { background: var(--primary-color); color: white; }
+
 .tech-pill-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
 .tech-pill { padding: 8px 18px; border-radius: 50px; background: var(--dark-bg); border: 1px solid var(--border-color); color: var(--text-grey); font-size: 0.9rem; transition: 0.3s; display: inline-flex; align-items: center; }
 .tech-pill i { margin-right: 8px; color: var(--primary-color); }
 .tech-pill:hover { border-color: var(--primary-color); color: white; }
 
-/* --- CERTIFS --- */
+/* --- CERTIFS (Mise à jour rouge unifiée) --- */
 .certif-card { transition: all 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); position: relative; overflow: hidden; }
 .certif-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--border-color); transition: all 0.4s ease; }
-.certif-card:hover { border-color: #ffc107; transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 193, 7, 0.15); }
-.certif-card:hover::before { background: #ffc107; box-shadow: 0 0 15px #ffc107; }
-.certif-badge-img { max-width: 140px; transition: all 0.4s ease; filter: drop-shadow(0 0 10px rgba(255, 193, 7, 0.2)); }
-.certif-card:hover .certif-badge-img { transform: scale(1.08) rotate(5deg); filter: drop-shadow(0 0 25px rgba(255, 193, 7, 0.6)); }
+.certif-card:hover { border-color: var(--primary-color); transform: translateY(-8px); box-shadow: 0 15px 30px rgba(220, 53, 69, 0.15); }
+.certif-card:hover::before { background: var(--primary-color); box-shadow: 0 0 15px var(--primary-color); }
+.certif-badge-img { max-width: 140px; transition: all 0.4s ease; filter: drop-shadow(0 0 10px rgba(220, 53, 69, 0.1)); }
+.certif-card:hover .certif-badge-img { transform: scale(1.08) rotate(5deg); filter: drop-shadow(0 0 25px rgba(220, 53, 69, 0.4)); }
 
 /* --- HOBBIES & CONTACT --- */
 .hobby-card { border: 2px solid var(--primary-color); border-radius: 15px; padding: 2rem; transition: 0.3s; height: 100%; }
 .hobby-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2); }
+
 .contact-form { border: 1px solid var(--border-color); }
 .form-control.dark-input { background-color: var(--dark-bg); border: 1px solid #333; color: white; border-radius: 10px; }
+.dark-input::placeholder { color: var(--text-grey) !important; opacity: 1; }
+
 .btn-circle { width: 45px; height: 45px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; }
 .contact-link:hover .btn-circle { background-color: var(--primary-color); border-color: var(--primary-color); transform: translateY(-5px); }
+
 .input-icon-wrapper { position: relative; }
 .input-icon-wrapper i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); z-index: 10; font-size: 1.2rem; pointer-events: none; }
 .input-icon-wrapper.textarea-wrapper i { top: 25px; transform: none; }
-.input-icon-wrapper .form-control { padding-left: 55px !important; }
-.input-icon-wrapper label { padding-left: 55px !important; }
-.dark-input::placeholder { color: var(--text-grey) !important; opacity: 1; }
+.input-icon-wrapper .form-control, .input-icon-wrapper label { padding-left: 55px !important; }
 
 /* --- MOBILE --- */
 @media (max-width: 768px) {
@@ -194,6 +201,13 @@ body.light-mode h4, body.light-mode h5, body.light-mode p {
     color: #212529 !important;
 }
 
+body.light-mode .text-danger, 
+body.light-mode h4.text-danger, 
+body.light-mode h5.text-danger, 
+body.light-mode .modal-title.text-danger { 
+    color: var(--primary-color) !important; 
+}
+
 body.light-mode .content-card, 
 body.light-mode .card-custom, 
 body.light-mode .skill-card-v3, 
@@ -211,25 +225,24 @@ body.light-mode .certif-card {
 body.light-mode .skill-card-v3:hover,
 body.light-mode .certif-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important; }
 
+body.light-mode section::before { background-color: rgba(0, 0, 0, 0.1); }
+
 body.light-mode .navbar-floating { background: rgba(255, 255, 255, 0.75) !important; border: 1px solid rgba(0, 0, 0, 0.05); }
 body.light-mode .navbar-brand,
 body.light-mode .navbar-nav .nav-link { color: #212529 !important; }
 
-
-body.light-mode .navbar-nav .nav-link:hover { color: var(--primary-color) !important; }
-body.light-mode .navbar-nav .nav-link:hover::after { width: 60%; }
-
+body.light-mode .navbar-nav .nav-link:hover,
 body.light-mode .navbar-nav .nav-link.active { color: var(--primary-color) !important; }
+body.light-mode .navbar-nav .nav-link:hover::after { width: 60%; }
 
 body.light-mode .btn-outline-light { color: #212529; border-color: #212529; }
 body.light-mode .btn-outline-light:hover { background-color: #212529; color: #ffffff !important; }
+
 body.light-mode .dark-input { background-color: #ffffff; color: #212529; border: 1px solid #ced4da; }
 body.light-mode .dark-input::placeholder { color: #6c757d !important; }
 
 body.light-mode .btn-close-white { filter: invert(1) grayscale(100%) brightness(0%) !important; opacity: 0.7 !important; }
 body.light-mode .btn-close-white:hover { opacity: 1 !important; }
-
-body.light-mode section::before { background-color: rgba(0, 0, 0, 0.1); }
 
 body.light-mode .timeline-title { color: #212529 !important; }
 body.light-mode .timeline-text { color: #495057 !important; }
@@ -248,11 +261,9 @@ body.light-mode .skill-card-v3:hover h5.text-white { color: #000000 !important; 
 body.light-mode .tech-pill { background-color: #f8f9fa !important; border-color: #ced4da !important; color: #212529 !important; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
 body.light-mode .tech-pill:hover { border-color: var(--primary-color) !important; color: var(--primary-color) !important; background-color: rgba(220, 53, 69, 0.05) !important; }
 
-body.light-mode .carousel-control-prev-icon, body.light-mode .carousel-control-next-icon { filter: invert(1) grayscale(100%) brightness(0%) !important; }
-body.light-mode .carousel-control-prev:hover, body.light-mode .carousel-control-next:hover { background-color: rgba(0, 0, 0, 0.05); }
+body.light-mode .carousel-control-prev-icon, 
+body.light-mode .carousel-control-next-icon { filter: invert(1) grayscale(100%) brightness(0%) !important; }
+body.light-mode .carousel-control-prev:hover, 
+body.light-mode .carousel-control-next:hover { background-color: rgba(0, 0, 0, 0.05); }
 
 body:not(.light-mode) .modal-content { background-color: #1e1e1e !important; backdrop-filter: none !important; border: 1px solid #333 !important; }
-
-body.light-mode .text-danger, body.light-mode h4.text-danger, body.light-mode h5.text-danger, body.light-mode .modal-title.text-danger { color: var(--primary-color) !important; }
-
-
