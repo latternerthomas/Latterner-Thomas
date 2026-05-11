@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body class="light-mode">
 
     <!-- NOUVEAU MENU FLOTTANT -->
     <div class="container fixed-top mt-3" style="z-index: 1030;">
@@ -42,7 +42,7 @@
         <div class="container">
             <h4 class="text-uppercase tracking-wider">Bienvenue sur mon Portfolio</h4>
             <h1 class="display-1 fw-bold">Thomas <span class="text-danger">Latterner</span></h1>
-            <p class="lead mt-3">Étudiant en BUT Réseaux & Télécommunications</p>
+            <p class="lead mt-3">Alternant & Étudiant en BUT Réseaux & Télécommunications</p>
             <div class="mt-4">
                 <a href="#portfolio" class="btn btn-danger btn-lg rounded-pill px-4 me-2">Mes Projets</a>
                 <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4">Me contacter</a>
@@ -279,79 +279,97 @@
     </section>
 
     <!-- CERTIFICATIONS SECTION -->
-    <section id="certifications" class="section-padding bg-black text-white border-top border-secondary">
+   <section id="certifications" class="section-padding bg-black">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Mes Certifications</h2>
+                <h2 class="text-white">Certifications & Diplômes</h2>
                 <hr class="border-danger border-2 opacity-100 mx-auto mt-4" style="width: 60px;">
-                <p class="text-secondary mt-2">Reconnaissances officielles et professionnelles.</p>
             </div>
+
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-6">
-                    <div class="content-card p-4 p-md-4 certif-card h-100">
+                
+                <div class="col-md-6">
+                    <div class="content-card p-4 certif-card h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-xl-4 text-center mb-4 mb-xl-0">
-                                <img src="images/ccna-badge.png" alt="Badge CCNA 1" class="img-fluid certif-badge-img">
+                            <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
+                                <img src="images/ccna-badge.png" alt="Badge Cisco CCNA" class="img-fluid certif-badge-img" style="max-width: 130px;">
                             </div>
-                            <div class="col-xl-8 text-center text-xl-start">
-                                <span class="badge bg-warning text-dark mb-3 fw-bold px-3 py-2">Récemment Obtenue</span>
-                                <h4 class="fw-bold mb-2">CCNA 1 : Introduction to Networks</h4>
-                                <h6 class="text-secondary mb-3"><i class="fas fa-building me-2"></i>Cisco Networking Academy</h6>
+                            <div class="col-12 col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-danger mb-3 fw-bold px-3 py-2 text-white">Avril 2026</span>
+                                <h4 class="fw-bold mb-2 text-white">Certification CCNA</h4>
+                                <h6 class="text-secondary mb-3"><i class="fas fa-medal me-2"></i>Cisco Networking Academy</h6>
                                 <p class="text-secondary small mb-4 text-justify">
-                                    Validation des compétences fondamentales en réseaux : architecture des modèles OSI et TCP/IP, adressage IPv4/IPv6, conception de réseaux locaux (LAN) et configuration initiale des routeurs et commutateurs Cisco.
+                                    Validation des compétences fondamentales en réseaux : modèles OSI/TCP-IP, adressage IPv4/IPv6, routage statique et configuration de base des équipements Cisco.
                                 </p>
-                                <a href="https://www.credly.com/badges/dee3f238-2dad-443e-8485-53effe449431" target="_blank" class="btn btn-outline-warning rounded-pill btn-sm px-4 py-2 fw-bold w-100">
-                                    <i class="fas fa-external-link-alt me-2"></i> Voir sur Credly
-                                </a>
+                                <a href="https://www.credly.com/badges/dee3f238-2dad-443e-8485-53effe449431/public_url" target="_blank" class="btn btn-outline-danger rounded-pill btn-sm px-4 py-2 fw-bold w-100">Détails de la certification</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="content-card p-4 p-md-4 certif-card h-100">
+                <div class="col-md-6">
+                    <div class="content-card p-4 certif-card h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-xl-4 text-center mb-4 mb-xl-0">
+                            <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
                                 <img src="images/logo-pix.png" alt="Logo PIX" class="img-fluid certif-badge-img" style="max-width: 120px;">
                             </div>
-                            <div class="col-xl-8 text-center text-xl-start">
-                                <span class="badge bg-primary mb-3 fw-bold px-3 py-2">Score : 859 Pix</span>
-                                <h4 class="fw-bold mb-2">Certification PIX</h4>
-                                <h6 class="text-secondary mb-3"><i class="fas fa-laptop-code me-2"></i>Compétences Numériques</h6>
+                            <div class="col-12 col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-danger mb-3 fw-bold px-3 py-2 text-white">Avril 2026</span>
+                                <h4 class="fw-bold mb-2 text-white">Certification PIX</h4>
+                                <h6 class="text-secondary mb-3"><i class="fas fa-check-circle me-2"></i>Compétences Numériques</h6>
                                 <p class="text-secondary small mb-4 text-justify">
-                                    Validation d'un niveau avancé (Niveau 7) sur les compétences clés du numérique, notamment en résolution de problèmes techniques, gestion de données, programmation et sécurité des environnements numériques.
+                                    Évaluation et certification des compétences numériques (recherche d'information, cybersécurité, bureautique et environnement numérique) avec un score de <strong>859 points</strong>.
                                 </p>
-                                <button class="btn btn-outline-primary rounded-pill btn-sm px-4 py-2 fw-bold w-100 disabled">
-                                    <i class="fas fa-check-circle me-2"></i> Certification Validée
-                                </button>
+                                <div class="border border-danger text-danger rounded-pill px-4 py-2 fw-bold w-100 text-center" style="font-size: 0.875rem; cursor: default; background: transparent;">
+                                    <i class="fas fa-award me-2"></i>Certification d'État Validée
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-				<div class="col-lg-6">
-                    <div class="content-card p-4 p-md-4 certif-card h-100">
+
+                <div class="col-md-6">
+                    <div class="content-card p-4 certif-card h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-xl-4 text-center mb-4 mb-xl-0">
-                                <img src="images/learnathon.png" alt="Badge Cisco Learn-A-Thon 2026" class="img-fluid certif-badge-img rounded-circle" style="max-width: 140px;">
+                            <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
+                                <img src="images/learnathon.png" alt="Badge Cisco Learn-A-Thon" class="img-fluid certif-badge-img" style="max-width: 130px;">
                             </div>
-                            <div class="col-xl-8 text-center text-xl-start">
-                                <span class="badge bg-success mb-3 fw-bold px-3 py-2">Nouveau</span>
-                                <h4 class="fw-bold mb-2">Cisco Learn-A-Thon 2026</h4>
+                            <div class="col-12 col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-danger mb-3 fw-bold px-3 py-2 text-white">Avril 2026</span>
+                                <h4 class="fw-bold mb-2 text-white">Cisco Learn-A-Thon 2026</h4>
                                 <h6 class="text-secondary mb-3"><i class="fas fa-medal me-2"></i>Cisco Networking Academy</h6>
                                 <p class="text-secondary small mb-4 text-justify">
-                                    Participation au challenge d'apprentissage intensif Cisco. Cette distinction valide mon engagement dans la formation continue et l'acquisition proactive de nouvelles compétences techniques sur les technologies réseaux et cybersécurité.
+                                    Participation au challenge d'apprentissage intensif Cisco. Engagement dans la formation continue et l'acquisition de nouvelles compétences techniques.
                                 </p>
-                                <a href="https://www.credly.com/earner/earned/badge/06ec015a-cd26-4cfc-93ec-0751e1043a30" target="_blank" class="btn btn-outline-success rounded-pill btn-sm px-4 py-2 fw-bold w-100">
-                                    <i class="fas fa-external-link-alt me-2"></i> Voir sur Credly
-                                </a>
+                                <a href="https://www.credly.com/earner/earned/badge/06ec015a-cd26-4cfc-93ec-0751e1043a30" target="_blank" class="btn btn-outline-danger rounded-pill btn-sm px-4 py-2 fw-bold w-100">Détails de la certification</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-6">
+                    <div class="content-card p-4 certif-card h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
+                                <img src="images/badge-securite-terminaux.png" alt="Badge Cisco Endpoint Security" class="img-fluid certif-badge-img" style="max-width: 130px;">
+                            </div>
+                            <div class="col-12 col-lg-8 text-center text-lg-start">
+                                <span class="badge bg-danger mb-3 fw-bold px-3 py-2 text-white">Mai 2026</span>
+                                <h4 class="fw-bold mb-2 text-white">Endpoint Security</h4>
+                                <h6 class="text-secondary mb-3"><i class="fas fa-medal me-2"></i>Cisco Networking Academy</h6>
+                                <p class="text-secondary small mb-4 text-justify">
+                                    Validation de compétences en sécurité des terminaux : protection contre les logiciels malveillants, sécurisation des réseaux locaux et réponse aux incidents.
+                                </p>
+                                <a href="https://www.credly.com/badges/eb38f7c6-bb52-4f04-b935-66463920e8ad/public_url" target="_blank" class="btn btn-outline-danger rounded-pill btn-sm px-4 py-2 fw-bold w-100">Détails de la certification</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
-
+	
     <!-- HOBBIES SECTION -->
     <section id="hobbies" class="section-padding bg-dark text-white border-top border-secondary">
         <div class="container">
@@ -945,25 +963,34 @@
             const icon = themeToggle.querySelector("i");
             const body = document.body;
 
-            // Vérifier s'il y a un thème déjà sauvegardé
-            if (localStorage.getItem("theme") === "light") {
+            let currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme === null) {
+                currentTheme = "light";
+                localStorage.setItem("theme", "light");
+            }
+
+            if (currentTheme === "dark") {
+                body.classList.remove("light-mode");
+                icon.classList.replace("fa-moon", "fa-sun");
+                themeToggle.classList.replace("text-dark", "text-warning");
+            } else {
                 body.classList.add("light-mode");
                 icon.classList.replace("fa-sun", "fa-moon");
                 themeToggle.classList.replace("text-warning", "text-dark");
             }
 
-            // Action au clic sur le bouton
             themeToggle.addEventListener("click", function() {
                 body.classList.toggle("light-mode");
                 
                 if (body.classList.contains("light-mode")) {
                     icon.classList.replace("fa-sun", "fa-moon");
                     themeToggle.classList.replace("text-warning", "text-dark");
-                    localStorage.setItem("theme", "light"); // Sauvegarde
+                    localStorage.setItem("theme", "light"); 
                 } else {
                     icon.classList.replace("fa-moon", "fa-sun");
                     themeToggle.classList.replace("text-dark", "text-warning");
-                    localStorage.setItem("theme", "dark"); // Sauvegarde
+                    localStorage.setItem("theme", "dark"); 
                 }
             });
         });
