@@ -156,6 +156,12 @@ section::before {
 .certif-card:hover::before { background: var(--primary-color); box-shadow: 0 0 15px var(--primary-color); }
 .certif-badge-img { max-width: 140px; transition: all 0.4s ease; filter: drop-shadow(0 0 10px rgba(220, 53, 69, 0.1)); }
 .certif-card:hover .certif-badge-img { transform: scale(1.08) rotate(5deg); filter: drop-shadow(0 0 25px rgba(220, 53, 69, 0.4)); }
+.certif-badge-img { 
+    max-height: 110px; 
+    width: auto; 
+    transition: all 0.4s ease; 
+    filter: drop-shadow(0 0 10px rgba(220, 53, 69, 0.1)); 
+}
 
 /* --- HOBBIES & CONTACT --- */
 .hobby-card { border: 2px solid var(--primary-color); border-radius: 15px; padding: 2rem; transition: 0.3s; height: 100%; }
