@@ -575,7 +575,7 @@
                                 <h4 class="text-danger h5 mb-3 fw-bold"><i class="fas fa-project-diagram me-2"></i>Conception globale sur Packet Tracer</h4>
                                 <p class="text-secondary text-justify small mb-0">
                                     Ce projet regroupe le déploiement de A à Z d'une infrastructure réseau réaliste interconnectant le réseau privé d'une entreprise, une université et le réseau public (Internet).</br>
-									L'objectif était d'assurer le routage de l'information tout en garantissant un haut niveau de sécurité avec filtrage et DMZ.
+                                    L'objectif était d'assurer le routage de l'information tout en garantissant un haut niveau de sécurité avec filtrage et DMZ.
                                 </p>
                             </div>
 
@@ -597,8 +597,26 @@
                                 </ul>
                             </div>
                         </div>
+					</div>
 
+                    <div class="reflexion-box p-4 rounded mt-4 border border-danger border-opacity-50" style="background-color: rgba(220, 53, 69, 0.05);">
+                        <h4 class="text-danger h5 mb-4 fw-bold text-center"><i class="fas fa-brain me-2"></i>Bilan</h4>
+                        <div class="row g-4">
+                            <div class="col-md-4 border-end border-danger border-opacity-25">
+                                <strong class="text-white d-block mb-2"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Difficultés rencontrées</strong>
+                                <p class="text-secondary small mb-0 text-justify">Conflit avec le NAT (Network Address Translation). Le trafic destiné au site distant était traduit avant d'être chiffré par le tunnel VPN, ce qui bloquait les communications.</p>
+                            </div>
+                            <div class="col-md-4 border-end border-danger border-opacity-25">
+                                <strong class="text-white d-block mb-2"><i class="fas fa-lightbulb text-danger me-2"></i>Solutions mises en œuvre</strong>
+                                <p class="text-secondary small mb-0 text-justify">Configuration d'une règle de "NAT Exemption" via une ACL spécifique. J'ai instruit le routeur de ne pas traduire les paquets s'ils sont destinés à traverser le tunnel IPsec.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <strong class="text-white d-block mb-2"><i class="fas fa-bullseye text-danger me-2"></i>Ce que j'en retiens</strong>
+                                <p class="text-secondary small mb-0 text-justify">Une meilleure méthodologie de dépannage. J'ai compris qu'il est indispensable de visualiser l'ordre de traitement des paquets et l'interaction des protocoles OSI.</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -679,7 +697,24 @@
                             </ul>
                         </div>
                     </div>
-
+					
+					<div class="reflexion-box p-4 rounded mt-4 border border-danger border-opacity-50" style="background-color: rgba(220, 53, 69, 0.05);">
+						<h4 class="text-danger h5 mb-4 fw-bold text-center"><i class="fas fa-brain me-2"></i>Bilan</h4>
+						<div class="row g-4">
+							<div class="col-md-4 border-end border-danger border-opacity-25">
+								<strong class="text-white d-block mb-2"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Difficultés rencontrées</strong>
+								<p class="text-secondary small mb-0 text-justify">Lors des ateliers de raccordement optique, mes premières épissures présentaient une atténuation de signal beaucoup trop forte en identifiant lors du contrôle au réflectomètre.</p>
+							</div>
+							<div class="col-md-4 border-end border-danger border-opacity-25">
+								<strong class="text-white d-block mb-2"><i class="fas fa-lightbulb text-danger me-2"></i>Solutions mises en œuvre</strong>
+								<p class="text-secondary small mb-0 text-justify">Reprise de ma méthodologie : nettoyage plus minutieux de la fibre à l'alcool et réglage strict de la cliveuse pour obtenir une coupe parfaitement droite avant fusion.</p>
+							</div>
+							<div class="col-md-4">
+								<strong class="text-white d-block mb-2"><i class="fas fa-bullseye text-danger me-2"></i>Ce que j'en retiens</strong>
+								<p class="text-secondary small mb-0 text-justify">Cette expérience m'a inculqué une grande minutie. J'ai réalisé que la performance des couches réseau logicielles dépend avant tout de la couche physique.</p>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
@@ -750,7 +785,24 @@
                             </ul>
                         </div>
                     </div>
-
+					
+					<div class="reflexion-box p-4 rounded mt-4 border border-danger border-opacity-50" style="background-color: rgba(220, 53, 69, 0.05);">
+						<h4 class="text-danger h5 mb-4 fw-bold text-center"><i class="fas fa-brain me-2"></i>Bilan</h4>
+						<div class="row g-4">
+							<div class="col-md-4 border-end border-danger border-opacity-25">
+								<strong class="text-white d-block mb-2"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Difficultés rencontrées</strong>
+								<p class="text-secondary small mb-0 text-justify">Lors de l'interconnexion de téléphones IP sur 3CX, nous avons eu des problèmes de "blanc téléphonique" (audio unidirectionnel). L'appel passait, mais le son ne fonctionnait que d'un côté.</p>
+							</div>
+							<div class="col-md-4 border-end border-danger border-opacity-25">
+								<strong class="text-white d-block mb-2"><i class="fas fa-lightbulb text-danger me-2"></i>Solutions mises en œuvre</strong>
+									<p class="text-secondary small mb-0 text-justify">Analyse du trafic avec Wireshark. J'ai identifié que la signalisation (SIP) passait, mais que la voix (RTP) était bloquée. L'ouverture des ports RTP sur le pare-feu a résolu le souci.</p>
+							</div>
+							<div class="col-md-4">
+								<strong class="text-white d-block mb-2"><i class="fas fa-bullseye text-danger me-2"></i>Ce que j'en retiens</strong>
+								<p class="text-secondary small mb-0 text-justify">La capacité à distinguer les flux de contrôle (signalisation) des flux médias. J'ai surtout renforcé mon aptitude à analyser des trames réseau pour diagnostiquer des pannes.</p>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
@@ -822,7 +874,24 @@
                                 </ul>
                             </div>
                         </div>
-
+						
+						<div class="reflexion-box p-4 rounded mt-4 border border-danger border-opacity-50" style="background-color: rgba(220, 53, 69, 0.05);">
+							<h4 class="text-danger h5 mb-4 fw-bold text-center"><i class="fas fa-brain me-2"></i>Bilan</h4>
+							<div class="row g-4">
+								<div class="col-md-4 border-end border-danger border-opacity-25">
+									<strong class="text-white d-block mb-2"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Difficultés rencontrées</strong>
+									<p class="text-secondary small mb-0 text-justify">Le défi principal fut la gestion de la concurrence. Si plusieurs utilisateurs envoyaient des messages en même temps, l'interface graphique bloquait ou ratait des messages.</p>
+								</div>
+								<div class="col-md-4 border-end border-danger border-opacity-25">
+									<strong class="text-white d-block mb-2"><i class="fas fa-lightbulb text-danger me-2"></i>Solutions mises en œuvre</strong>
+									<p class="text-secondary small mb-0 text-justify">Restructuration complète de l'application pour y intégrer des Threads (multithreading). Le thread de l'IHM a été séparé des threads qui écoutent le réseau en arrière-plan.</p>
+								</div>
+								<div class="col-md-4">
+									<strong class="text-white d-block mb-2"><i class="fas fa-bullseye text-danger me-2"></i>Ce que j'en retiens</strong>
+									<p class="text-secondary small mb-0 text-justify">Une première vraie confrontation au développement orienté réseau asynchrone. Ce projet m'a prouvé l'importance de bien architecturer son code Orienté Objet (POO) dès le départ.</p>
+								</div>
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
